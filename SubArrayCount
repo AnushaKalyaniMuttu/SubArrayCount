@@ -1,0 +1,21 @@
+package com.employee;
+
+public class GroupingBy {
+   
+	public static void main(String [] args) {
+	int arr[]= {1,2,3,4,3,2,5,7,2,1,2};
+	int k=7;
+	int result=0;
+	for(int i=0;i<arr.length;i++) {//0				//1					//2
+		int sum=0;
+		for( int j=i;j<arr.length;j++) {//0,1,2       //1,2              2
+			sum=sum+arr[j];
+			if(sum==k) {
+				result++;
+			}
+		}
+		
+	}
+	System.out.println("Number of SubArrays that sums up to "+k +" is "+result);
+	}
+}
